@@ -1,0 +1,108 @@
+.section {
+  position: relative;
+  padding-block: var(--section-y);
+  background: var(--bg);
+  border-top: 1px solid var(--rule);
+}
+
+/* A thin cyan line marks the section the founder/investor CTAs lead to */
+.section::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  inset-inline-start: var(--gutter);
+  width: min(12rem, 30vw);
+  height: 2px;
+  background: var(--cyan);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.copy {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.label {
+  color: var(--cyan);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+}
+
+.heading {
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.015em;
+}
+
+.intro {
+  max-width: var(--measure);
+  font-size: var(--fs-md);
+}
+
+.facts {
+  border-top: 1px solid var(--rule);
+}
+
+.fact {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--rule);
+}
+
+.fact dt {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.fact dd {
+  color: var(--text);
+}
+
+.stepsHeading {
+  font-size: var(--fs-md);
+  font-weight: 700;
+}
+
+.steps {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  counter-reset: s;
+}
+
+.steps li {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  align-items: baseline;
+  counter-increment: s;
+}
+
+.steps li::before {
+  content: counter(s, decimal-leading-zero);
+  color: var(--amber);
+  font-family: var(--font-latin);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 959px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 559px) {
+  .fact {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+}

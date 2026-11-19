@@ -1,0 +1,91 @@
+/*
+ * Experts Live Saudi design tokens.
+ * Colours come from BRAND.md (v2 "night stage" system). Do not add brand colours here
+ * without an official source.
+ */
+:root {
+  /* Colour: surfaces */
+  --bg: #05071a;
+  --bg-2: #0b0e2e;
+  --navy: #131640;
+  --indigo: #2b3a8c;
+  --white: #ffffff;
+  --paper: #f7f9ff; /* light band (partners); same value as --text */
+
+  /* Colour: accents */
+  --blue: #328dc7;
+  --cyan: #45caff;
+  --amber: #ffb13b;
+  --amber-soft: #ffe3a3;
+
+  /* Colour: text */
+  --text: #f7f9ff;
+  --pale: #c9d4f2;
+  --muted: #9fb0d8;
+  --ink: #05071a; /* text on light surfaces */
+  --ink-muted: #3b4570;
+
+  /* Colour: lines */
+  --rule: rgb(43 58 140 / 0.55); /* indigo hairline on dark */
+  --rule-strong: var(--indigo);
+  --rule-light: rgb(5 7 26 / 0.12);
+
+  /* Colour: states */
+  --danger: #ff8a7a;
+  --success: #7fe0b0;
+
+  /* Type families (set by next/font in the locale layout) */
+  --font-latin: var(--font-montserrat), 'Segoe UI', system-ui, sans-serif;
+  --font-ar-body: var(--font-plex-arabic), var(--font-montserrat), 'Segoe UI', Tahoma, sans-serif;
+  --font-ar-display: var(--font-reem-kufi), var(--font-plex-arabic), var(--font-montserrat), Tahoma, sans-serif;
+
+  /* Type scale (classical scale, fluid at the top end) */
+  --fs-xs: 0.8125rem;   /* 13 */
+  --fs-sm: 0.9375rem;   /* 15 */
+  --fs-base: 1.0625rem; /* 17 */
+  --fs-md: 1.25rem;     /* 20 */
+  --fs-lg: 1.5rem;      /* 24 */
+  --fs-xl: clamp(1.75rem, 1.2rem + 1.8vw, 2.25rem);   /* 28 → 36 */
+  --fs-2xl: clamp(2.125rem, 1.3rem + 2.8vw, 3rem);    /* 34 → 48 */
+  --fs-3xl: clamp(2.75rem, 1.4rem + 4.6vw, 4.5rem);   /* 44 → 72 */
+  --fs-display: clamp(3rem, 1rem + 6.4vw, 6.5rem);    /* 48 → 104 */
+
+  --lh-tight: 1.02;
+  --lh-snug: 1.2;
+  --lh-body: 1.6;
+  --lh-body-ar: 1.85;
+
+  /* Space (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --section-y: clamp(4.5rem, 3rem + 6vw, 8.5rem);
+
+  /* Layout */
+  --container: 76rem;
+  --gutter: clamp(1.25rem, 0.6rem + 3vw, 3rem);
+  --measure: 62ch;
+
+  /* Shape: radius is used sparingly and by hierarchy */
+  --radius-sm: 4px;   /* inputs, small controls */
+  --radius-md: 10px;  /* the one form panel */
+  --radius-chip: 12px; /* logo chips, per brand rule */
+  --radius-pill: 999px; /* buttons */
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 160ms;
+  --dur-med: 280ms;
+
+  /* Focus */
+  --focus-ring: 0 0 0 3px var(--bg), 0 0 0 5px var(--cyan);
+
+  --header-h: 4.5rem;
+}

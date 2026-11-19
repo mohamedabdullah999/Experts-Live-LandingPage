@@ -1,0 +1,36 @@
+/* Brand rule: the Experts Live Saudi wordmark always sits on a white rounded chip on dark backgrounds. */
+.elksaChip {
+  display: inline-flex;
+  align-items: center;
+  height: 2.5rem;
+  padding: 0 0.85rem;
+  border-radius: var(--radius-chip);
+  background: var(--white);
+}
+
+.elksaChip img {
+  width: auto;
+  height: 1.55rem;
+}
+
+/* Brand rule: PNU is always the first logo, top right. */
+.pnu {
+  width: auto;
+  height: 2.6rem;
+}
+
+@media (max-width: 479px) {
+  .elksaChip {
+    height: 2.1rem;
+    padding: 0 0.6rem;
+    border-radius: 10px;
+  }
+
+  .elksaChip img {
+    height: 1.2rem;
+  }
+
+  .pnu {
+    height: 2rem;
+  }
+}

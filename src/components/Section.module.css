@@ -1,0 +1,25 @@
+.section {
+  padding-block: var(--section-y);
+}
+
+.alt {
+  background: var(--bg-2);
+}
+
+.head {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 46rem;
+  margin-bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+.heading {
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.015em;
+}
+
+.intro {
+  max-width: var(--measure);
+  color: var(--pale);
+  font-size: var(--fs-md);
+}

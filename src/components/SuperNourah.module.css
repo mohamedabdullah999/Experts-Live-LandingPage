@@ -1,0 +1,57 @@
+.section {
+  padding-block: var(--section-y);
+  background: var(--bg-2);
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+}
+
+/* The time is the headline of this moment */
+.time {
+  margin: 0;
+  color: var(--amber);
+  font-family: var(--font-latin);
+  font-size: clamp(5.5rem, 2rem + 13vw, 15rem);
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.copy {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 34rem;
+}
+
+.when {
+  color: var(--cyan);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+}
+
+.heading {
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.015em;
+}
+
+.body {
+  font-size: var(--fs-md);
+}
+
+.cta {
+  margin-top: var(--space-3);
+  justify-self: start;
+}
+
+@media (max-width: 799px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+}

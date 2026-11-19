@@ -1,0 +1,90 @@
+.button {
+  --btn-bg: transparent;
+  --btn-fg: var(--text);
+  --btn-border: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 3rem;
+  padding: 0 var(--space-5);
+  border: 1.5px solid var(--btn-border);
+  border-radius: var(--radius-pill);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: var(--fs-base);
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:focus-visible {
+  border-radius: var(--radius-pill);
+}
+
+.button[disabled],
+.button[aria-disabled='true'] {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+/* Amber is reserved for the main action */
+.primary {
+  --btn-bg: var(--amber);
+  --btn-fg: var(--ink);
+}
+
+.primary:hover {
+  --btn-bg: var(--amber-soft);
+}
+
+.secondary {
+  --btn-border: var(--cyan);
+  --btn-fg: var(--text);
+}
+
+.secondary:hover {
+  --btn-bg: rgb(69 202 255 / 0.12);
+}
+
+.quiet {
+  --btn-border: var(--rule-strong);
+  --btn-fg: var(--text);
+}
+
+.quiet:hover {
+  --btn-border: var(--pale);
+}
+
+.onLight {
+  --btn-border: var(--ink);
+  --btn-fg: var(--ink);
+}
+
+.onLight:hover {
+  --btn-bg: var(--ink);
+  --btn-fg: var(--white);
+}
+
+.small {
+  min-height: 2.5rem;
+  padding: 0 var(--space-4);
+  font-size: var(--fs-sm);
+}
+
+.block {
+  width: 100%;
+}
