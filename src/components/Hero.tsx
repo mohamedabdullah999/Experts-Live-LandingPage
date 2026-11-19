@@ -68,11 +68,12 @@ export function Hero({ c, en, ar }: Props) {
           </dl>
 
           <div className={styles.ctas}>
-            <ButtonLink href={SITE.links.tickets} external newTabLabel={c.a11y.opensNewTab}>
-              {c.ctaTicket}
-            </ButtonLink>
-            <ButtonLink href="#demo-day" variant="secondary" data-form="startup">
+            {/* The headline is Demo Day, so applying to pitch is the main action */}
+            <ButtonLink href="#demo-day" data-form="startup">
               {c.hero.ctaSecondary}
+            </ButtonLink>
+            <ButtonLink href={SITE.links.tickets} variant="secondary" external newTabLabel={c.a11y.opensNewTab}>
+              {c.ctaTicket}
             </ButtonLink>
           </div>
         </div>

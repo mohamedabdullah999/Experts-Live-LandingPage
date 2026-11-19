@@ -98,6 +98,8 @@
 
 .line {
   display: block;
+  /* Long lines (e.g. "Startups to pitch") wrap evenly instead of leaving one word alone */
+  text-wrap: balance;
 }
 
 .tagline {

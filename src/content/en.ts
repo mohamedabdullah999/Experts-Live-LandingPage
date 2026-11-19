@@ -4,7 +4,7 @@ const en: Content = {
   locale: 'en',
   dir: 'ltr',
   meta: {
-    title: 'Experts Live Saudi 2026 | Digital Conference, 29–30 Nov, Riyadh',
+    title: 'Demo Day: Startups to Pitch | Experts Live Saudi 2026, 29–30 Nov, Riyadh',
     description:
       'The first Saudi edition of Experts Live: two days on the digital economy at PNU Conference & Convention Center, Riyadh. 55+ speakers, 6 tracks, 8 hands-on labs and Demo Day.',
     ogLocale: 'en_US',
@@ -30,16 +30,16 @@ const en: Content = {
   langSwitch: { label: 'العربية', href: '/ar', lang: 'ar' },
   ctaTicket: 'Get your ticket',
   hero: {
-    kicker: 'Experts Live — Digital Conference',
-    titleLines: ['Experts Live', 'Saudi 2026'],
-    lead: 'The first Saudi edition of the global Experts Live conference, on the digital economy.',
+    kicker: 'Experts Live Saudi 2026',
+    titleLines: ['Demo Day', 'Startups to pitch'],
+    lead: 'At Experts Live Saudi 2026, startups pitch to investors, corporates and government buyers.',
     tagline: 'Learn. Share. Lead.',
     dateLabel: 'When',
     date: '29–30 November 2026',
     days: 'Sunday and Monday',
     venueLabel: 'Where',
     venue: 'PNU Conference & Convention Center, Riyadh',
-    ctaSecondary: 'Pitch at Demo Day',
+    ctaSecondary: 'Apply to pitch',
   },
   countdown: {
     live: 'Happening now',
