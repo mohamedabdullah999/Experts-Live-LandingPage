@@ -6,7 +6,7 @@ const en: Content = {
   meta: {
     title: 'Demo Day: Startups to Pitch | Experts Live Saudi 2026, 29–30 Nov, Riyadh',
     description:
-      'The first Saudi edition of Experts Live: two days on the digital economy at PNU Conference & Convention Center, Riyadh. 55+ speakers, 6 tracks, 8 hands-on labs and Demo Day.',
+      'Startups pitch to investors, corporates and government buyers at Experts Live Saudi 2026, 29–30 November at PNU Conference & Convention Center, Riyadh. Apply to pitch or request an investor invite.',
     ogLocale: 'en_US',
   },
   a11y: {
