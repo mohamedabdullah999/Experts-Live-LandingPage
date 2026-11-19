@@ -18,6 +18,8 @@ export const plexArabic = localFont({
   ],
   variable: '--font-plex-arabic',
   display: 'swap',
+  // ~135 KB for three weights: load on demand instead of blocking the English page
+  preload: false,
   fallback: ['Tahoma', 'sans-serif'],
 });
 

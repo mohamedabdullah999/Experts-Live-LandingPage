@@ -3,6 +3,13 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import pg from 'pg';
 
+// Load .env from the project root when the variables aren't already set (Node 20.12+)
+try {
+  process.loadEnvFile(path.resolve(import.meta.dirname, '..', '.env'));
+} catch {
+  // no .env file: rely on the environment
+}
+
 const url = process.env.DATABASE_URL;
 if (!url) {
   console.error('DATABASE_URL is not set');

@@ -1,0 +1,29 @@
+# Render Blueprint: temporary preview (web service from the Dockerfile + free PostgreSQL).
+# Render dashboard → New → Blueprint → pick this repo. Free plan: the service sleeps after
+# ~15 min idle (first visit then takes ~1 min) and the free database expires after 30 days.
+services:
+  - type: web
+    name: elksa-landing
+    runtime: docker
+    plan: free
+    region: frankfurt
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: elksa-db
+          property: connectionString
+      - key: IP_HASH_SALT
+        generateValue: true
+      - key: TRUSTED_PROXY_HOPS
+        value: '1'
+      # Used at build time for canonical/OG links. Update to the URL Render gives you, then redeploy.
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://elksa-landing.onrender.com
+
+databases:
+  - name: elksa-db
+    plan: free
+    region: frankfurt
+    databaseName: elksa_landing
+    user: elksa

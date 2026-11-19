@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   images: { formats: ['image/avif', 'image/webp'] },
+  // Branded 404 for URLs outside /en and /ar (the root layout lives under [locale])
+  experimental: { globalNotFound: true },
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }];
   },

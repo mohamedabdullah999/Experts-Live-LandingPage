@@ -22,7 +22,7 @@ Bilingual (English / Arabic) landing page for **Experts Live Saudi 2026**, 29–
 pnpm install
 cp .env.example .env            # set DATABASE_URL and IP_HASH_SALT
 
-# Option A: Postgres in Docker
+# Postgres in Docker (exposed on host port 5433)
 docker compose up -d db
 
 pnpm db:migrate                 # creates the applications table
@@ -31,7 +31,9 @@ pnpm dev                        # http://localhost:3000
 
 Production build: `pnpm build && pnpm start` (runs the standalone server).
 
-Everything in Docker: `docker compose up --build` (runs migrations on start).
+Everything in Docker: `docker compose up -d --build` (runs migrations on start). Health check: `GET /api/health`.
+
+Temporary preview: `render.yaml` is a Render Blueprint (Docker web service + free PostgreSQL). See `docs/DEPLOY.md`.
 
 > `NEXT_PUBLIC_SITE_URL` is read at **build** time (canonical links, Open Graph, sitemap). Set it before `pnpm build`.
 

@@ -186,9 +186,15 @@
   }
 }
 
+/* Very narrow screens: keep the label for screen readers, hide it visually */
 @media (max-width: 420px) {
   .menuLabel {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 }
 

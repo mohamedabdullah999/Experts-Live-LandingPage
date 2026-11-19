@@ -37,7 +37,8 @@
   /* Type families (set by next/font in the locale layout) */
   --font-latin: var(--font-montserrat), 'Segoe UI', system-ui, sans-serif;
   --font-ar-body: var(--font-plex-arabic), var(--font-montserrat), 'Segoe UI', Tahoma, sans-serif;
-  --font-ar-display: var(--font-reem-kufi), var(--font-plex-arabic), var(--font-montserrat), Tahoma, sans-serif;
+  /* Digits and Latin in Arabic headlines fall through to Montserrat, so the headline never waits on Plex */
+  --font-ar-display: var(--font-reem-kufi), var(--font-montserrat), var(--font-plex-arabic), Tahoma, sans-serif;
 
   /* Type scale (classical scale, fluid at the top end) */
   --fs-xs: 0.8125rem;   /* 13 */

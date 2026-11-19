@@ -4,7 +4,7 @@ import styles from './Logos.module.css';
 export function ElksaChip({ alt, className }: { alt: string; className?: string }) {
   return (
     <span className={[styles.elksaChip, className].filter(Boolean).join(' ')}>
-      <Image src="/logos/elksa-logo.png" alt={alt} width={900} height={201} priority />
+      <Image src="/logos/elksa-logo.png" alt={alt} width={900} height={201} sizes="140px" priority />
     </span>
   );
 }
@@ -18,6 +18,7 @@ export function PnuLogo({ alt, className }: { alt: string; className?: string })
       alt={alt}
       width={900}
       height={256}
+      sizes="150px"
       priority
     />
   );

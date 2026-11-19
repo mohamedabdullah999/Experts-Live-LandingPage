@@ -159,3 +159,9 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Off-screen sections skip layout and paint until they approach the viewport */
+main > section:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}

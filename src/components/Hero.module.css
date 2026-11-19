@@ -240,6 +240,10 @@
     animation-name: fadeUp;
   }
 
+  .primarySide {
+    animation: none;
+  }
+
   .axis {
     order: 1;
     justify-self: center;
