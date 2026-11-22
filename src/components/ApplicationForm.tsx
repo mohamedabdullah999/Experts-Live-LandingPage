@@ -17,6 +17,7 @@ const MAX_BY_FIELD: Record<string, number> = {
   organisation: LIMITS.org,
   role: LIMITS.org,
   website: LIMITS.url,
+  pitchDeck: LIMITS.url,
   pitch: LIMITS.pitch,
 };
 
@@ -82,6 +83,7 @@ export function ApplicationForm({ c }: { c: Pick<Content, 'locale' | 'form'> }) 
             sector: String(data.get('sector') ?? ''),
             stage: String(data.get('stage') ?? ''),
             pitch: String(data.get('pitch') ?? ''),
+            pitchDeck: String(data.get('pitchDeck') ?? ''),
           }
         : {
             organisation: String(data.get('organisation') ?? ''),
@@ -325,6 +327,7 @@ export function ApplicationForm({ c }: { c: Pick<Content, 'locale' | 'form'> }) 
                     aria-invalid={errors.pitch ? true : undefined}
                     aria-describedby={describedBy('pitch', true)}
                   />)}
+                {field({ name: "pitchDeck", label: f.fields.pitchDeck.label, optional: true, hint: f.fields.pitchDeck.hint }, input('pitchDeck', 'url', { ltr: true, placeholder: f.fields.pitchDeck.placeholder, required: false, hint: true }))}
               </>
             ) : (
               <>

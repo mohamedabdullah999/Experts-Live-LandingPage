@@ -61,6 +61,7 @@ function toRow(app: Application) {
         sector: app.sector,
         stage: app.stage,
         pitch: app.pitch,
+        pitchDeckUrl: app.pitchDeck ?? null,
       },
     };
   }

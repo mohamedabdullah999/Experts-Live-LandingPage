@@ -120,6 +120,7 @@ export interface Content {
       phone: FieldCopy;
       startupName: FieldCopy;
       website: FieldCopy;
+      pitchDeck: FieldCopy;
       sector: FieldCopy;
       stage: FieldCopy;
       pitch: FieldCopy;

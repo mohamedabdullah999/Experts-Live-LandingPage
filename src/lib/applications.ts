@@ -35,13 +35,17 @@ const email = z
   .max(LIMITS.email, { error: 'tooLong' })
   .pipe(z.email({ error: 'email' }));
 
-const website = z
+/** Optional http(s) link: empty becomes undefined */
+const optionalUrl = z
   .string()
   .trim()
   .max(LIMITS.url, { error: 'tooLong' })
   .optional()
   .transform((v) => (v ? v : undefined))
   .refine((v) => v === undefined || /^https?:\/\/[^\s.]+\.[^\s]+$/i.test(v), { error: 'url' });
+
+const website = optionalUrl;
+const pitchDeck = optionalUrl;
 
 const consent = z.literal(true, { error: 'consent' });
 
@@ -63,6 +67,7 @@ export const startupSchema = z.object({
   sector: z.enum(SECTORS, { error: 'required' }),
   stage: z.enum(STAGES, { error: 'required' }),
   pitch: text(LIMITS.pitch),
+  pitchDeck,
 });
 
 export const investorSchema = z.object({

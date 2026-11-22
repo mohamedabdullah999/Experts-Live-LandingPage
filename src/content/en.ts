@@ -174,6 +174,11 @@ const en: Content = {
       phone: { label: 'Mobile number', placeholder: '+966 5X XXX XXXX' },
       startupName: { label: 'Startup name' },
       website: { label: 'Website', placeholder: 'https://' },
+      pitchDeck: {
+        label: 'Pitch deck link',
+        placeholder: 'https://',
+        hint: 'A view link from Google Slides, Canva, Pitch, DocSend or Drive.',
+      },
       sector: { label: 'Sector' },
       stage: { label: 'Stage' },
       pitch: { label: 'Your startup in one line', hint: 'What you do and for whom, in up to 280 characters.' },
