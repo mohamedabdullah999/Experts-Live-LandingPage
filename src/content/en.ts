@@ -279,15 +279,7 @@ const en: Content = {
   },
   partners: {
     heading: 'Organised with',
-    groupTitles: {
-      powered: 'Organised by',
-      main: 'Main partners',
-      diamond: 'Diamond sponsor',
-      platinum: 'Platinum sponsors',
-      gold: 'Gold sponsor',
-      bronze: 'Bronze sponsors',
-      partners: 'Partners',
-    },
+    groupTitle: 'Organised by',
   },
   partnerCta: {
     heading: 'Invite your clients. Meet them at your booth.',

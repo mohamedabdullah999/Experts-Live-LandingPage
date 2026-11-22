@@ -277,15 +277,7 @@ const ar: Content = {
   },
   partners: {
     heading: 'بالشراكة مع',
-    groupTitles: {
-      powered: 'التنظيم',
-      main: 'الشركاء الرئيسيون',
-      diamond: 'الراعي الماسي',
-      platinum: 'الرعاة البلاتينيون',
-      gold: 'الراعي الذهبي',
-      bronze: 'الرعاة البرونزيون',
-      partners: 'الشركاء',
-    },
+    groupTitle: 'التنظيم',
   },
   partnerCta: {
     heading: 'ادعُ عملاءك، والتقِ بهم في جناحك.',

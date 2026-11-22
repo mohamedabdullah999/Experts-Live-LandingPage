@@ -1,14 +1,9 @@
-.groups {
-  display: grid;
-  gap: 0;
-  border-top: 1px solid var(--rule);
-}
-
 .group {
   display: grid;
   grid-template-columns: 12rem 1fr;
   gap: var(--space-5);
   padding-block: var(--space-6);
+  border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
 
@@ -20,20 +15,16 @@
 }
 
 .tiles {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
   gap: var(--space-3);
 }
 
-/* The official artwork is white on transparent, so tiles are dark (as on expertslive.sa) */
+/* The official artwork is white on transparent, so tiles are dark */
 .tile {
-  --tile-w: 9.5rem;
-  --tile-h: 4.5rem;
-  --logo-h: 2.4rem;
   display: grid;
   place-items: center;
-  width: var(--tile-w);
-  height: var(--tile-h);
+  height: 5rem;
   padding: var(--space-3) var(--space-4);
   border: 1px solid var(--rule);
   border-radius: var(--radius-chip);
@@ -45,24 +36,12 @@
   border-color: var(--indigo);
 }
 
-.lead .tile {
-  --tile-w: 12rem;
-  --tile-h: 6rem;
-  --logo-h: 3.4rem;
-}
-
-.logo {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  aspect-ratio: var(--ar);
-  width: min(100%, calc(var(--logo-h) * var(--ar)));
-}
-
-.logo img {
-  position: absolute;
-  max-width: none;
+.tile img {
+  width: auto;
   height: auto;
+  max-width: 100%;
+  max-height: 2.6rem;
+  object-fit: contain;
 }
 
 @media (max-width: 759px) {
@@ -75,8 +54,7 @@
     padding-top: 0;
   }
 
-  .tile,
-  .lead .tile {
-    width: calc(50% - var(--space-3) / 2);
+  .tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
