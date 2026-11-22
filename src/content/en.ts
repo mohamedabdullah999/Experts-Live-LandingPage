@@ -280,7 +280,7 @@ const en: Content = {
   partners: {
     heading: 'Organised with',
     groups: [
-      { title: 'Organised by', names: ['AI in Healthcare Chair', 'ZAT.VC', 'Cloud Mechanics', 'Smart Code'] },
+      { title: 'Organised by', names: ['AI in Healthcare Chair', 'Year of AI 2026', 'Cloud Mechanics'] },
       { title: 'In collaboration with', names: ['Microsoft', 'MCIT', 'Saudi Digital Academy', 'SDA thehub'] },
       { title: 'Official partners', names: ['BLEND', 'CapNest', 'STF', 'iyelo', 'JOFOUZ', 'Companyx'] },
       {

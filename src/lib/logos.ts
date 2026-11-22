@@ -15,8 +15,10 @@ export interface LogoFile {
 
 export const LOGOS: Record<string, LogoFile> = {
   PNU: { src: '/logos/pnu-white.png', width: 900, height: 256, keepOnDark: true },
-  'AI in Healthcare Chair': { src: '/logos/ai-healthcare-chair.png', width: 736, height: 343 },
-  'Cloud Mechanics': { src: '/logos/cloud-mechanics-white.png', width: 676, height: 177, mono: true },
+  // Organisers, white artwork from the "Powered By" row on expertslive.sa/sponsors (Nov 2026)
+  'AI in Healthcare Chair': { src: '/logos/rcai-white.png', width: 260, height: 123, mono: true },
+  'Year of AI 2026': { src: '/logos/ai-year-2026-white.png', width: 260, height: 97, mono: true },
+  'Cloud Mechanics': { src: '/logos/cloud-mechanics-2026-white.png', width: 260, height: 68, mono: true },
   'Smart Code': { src: '/logos/smart-code.png', width: 278, height: 156 },
   Microsoft: { src: '/logos/microsoft-white.png', width: 590, height: 128, mono: true },
   MCIT: { src: '/logos/mcit.png', width: 461, height: 126 },

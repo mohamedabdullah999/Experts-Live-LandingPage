@@ -278,7 +278,7 @@ const ar: Content = {
   partners: {
     heading: 'بالشراكة مع',
     groups: [
-      { title: 'التنظيم', names: ['AI in Healthcare Chair', 'ZAT.VC', 'Cloud Mechanics', 'Smart Code'] },
+      { title: 'التنظيم', names: ['AI in Healthcare Chair', 'Year of AI 2026', 'Cloud Mechanics'] },
       { title: 'بالتعاون مع', names: ['Microsoft', 'MCIT', 'Saudi Digital Academy', 'SDA thehub'] },
       { title: 'الشركاء الرسميون', names: ['BLEND', 'CapNest', 'STF', 'iyelo', 'JOFOUZ', 'Companyx'] },
       {
