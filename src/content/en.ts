@@ -243,16 +243,6 @@ const en: Content = {
       { name: 'Automation', topics: 'Automation, digital experience, digital economy' },
       { name: 'Endpoint & Device Management', topics: 'Modern workplace, endpoint security' },
     ],
-    moreHeading: 'Also at the event',
-    more: [
-      { title: 'Hackathon', text: 'Announced at the event. Winners are named at the gala.' },
-      { title: 'Ask the Experts', text: 'A student programme with PNU on careers, mentoring and internships. SDA bootcamp graduates meet employers.' },
-      { title: 'Expo floor', text: 'Two expo halls with partner stands, a demo arena, the Startup Corner, the Cyber Escape Challenge and a networking bar.' },
-      { title: 'Podcast studio', text: 'Live episodes recorded with speakers.' },
-      { title: 'VIP Majlis', text: 'A hosted lounge for VIPs, partners and government guests.' },
-      { title: 'Gala dinner and awards', text: 'Day 2 evening.' },
-      { title: 'Community launches', text: 'Including MUG KSA, the MongoDB User Group Saudi Arabia.' },
-    ],
   },
   speakers: {
     heading: '55+ speakers from 16 countries',

@@ -17,17 +17,6 @@ export function Programme({ c }: { c: Content }) {
         ))}
       </ul>
 
-      <div className={styles.more}>
-        <h3 className={styles.moreHeading}>{p.moreHeading}</h3>
-        <dl className={styles.moreList}>
-          {p.more.map((m) => (
-            <div key={m.title} className={styles.moreItem}>
-              <dt>{m.title}</dt>
-              <dd>{m.text}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
     </Section>
   );
 }

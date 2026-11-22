@@ -164,8 +164,6 @@ export interface Content {
     heading: string;
     intro: string;
     tracks: Track[];
-    moreHeading: string;
-    more: Item[];
   };
   speakers: {
     heading: string;
