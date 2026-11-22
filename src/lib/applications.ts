@@ -35,17 +35,16 @@ const email = z
   .max(LIMITS.email, { error: 'tooLong' })
   .pipe(z.email({ error: 'email' }));
 
-/** Optional http(s) link: empty becomes undefined */
-const optionalUrl = z
-  .string()
+/** Required http(s) link */
+const url = z
+  .string({ error: 'required' })
   .trim()
+  .min(1, { error: 'required' })
   .max(LIMITS.url, { error: 'tooLong' })
-  .optional()
-  .transform((v) => (v ? v : undefined))
-  .refine((v) => v === undefined || /^https?:\/\/[^\s.]+\.[^\s]+$/i.test(v), { error: 'url' });
+  .refine((v) => /^https?:\/\/[^\s.]+\.[^\s]+$/i.test(v), { error: 'url' });
 
-const website = optionalUrl;
-const pitchDeck = optionalUrl;
+const website = url;
+const pitchDeck = url;
 
 const consent = z.literal(true, { error: 'consent' });
 

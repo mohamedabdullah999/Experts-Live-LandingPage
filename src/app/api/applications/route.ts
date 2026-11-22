@@ -57,11 +57,11 @@ function toRow(app: Application) {
     return {
       organisation: app.startupName,
       details: {
-        website: app.website ?? null,
+        website: app.website,
         sector: app.sector,
         stage: app.stage,
         pitch: app.pitch,
-        pitchDeckUrl: app.pitchDeck ?? null,
+        pitchDeckUrl: app.pitchDeck,
       },
     };
   }

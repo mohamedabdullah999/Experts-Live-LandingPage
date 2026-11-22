@@ -311,7 +311,7 @@ export function ApplicationForm({ c }: { c: Pick<Content, 'locale' | 'form'> }) 
               <>
                 <div className={styles.row}>
                   {field({ name: "startupName", label: f.fields.startupName.label }, input('startupName', 'text', { autoComplete: 'organization' }))}
-                  {field({ name: "website", label: f.fields.website.label, optional: true }, input('website', 'url', { ltr: true, autoComplete: 'url', placeholder: f.fields.website.placeholder, required: false }))}
+                  {field({ name: "website", label: f.fields.website.label }, input('website', 'url', { ltr: true, autoComplete: 'url', placeholder: f.fields.website.placeholder }))}
                 </div>
                 <div className={styles.row}>
                   {field({ name: "sector", label: f.fields.sector.label }, select('sector', f.sectors))}
@@ -327,7 +327,7 @@ export function ApplicationForm({ c }: { c: Pick<Content, 'locale' | 'form'> }) 
                     aria-invalid={errors.pitch ? true : undefined}
                     aria-describedby={describedBy('pitch', true)}
                   />)}
-                {field({ name: "pitchDeck", label: f.fields.pitchDeck.label, optional: true, hint: f.fields.pitchDeck.hint }, input('pitchDeck', 'url', { ltr: true, placeholder: f.fields.pitchDeck.placeholder, required: false, hint: true }))}
+                {field({ name: "pitchDeck", label: f.fields.pitchDeck.label, hint: f.fields.pitchDeck.hint }, input('pitchDeck', 'url', { ltr: true, placeholder: f.fields.pitchDeck.placeholder, hint: true }))}
               </>
             ) : (
               <>
