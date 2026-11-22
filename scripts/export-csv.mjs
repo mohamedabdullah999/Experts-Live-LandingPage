@@ -24,14 +24,14 @@ if (kind && !['startup', 'investor'].includes(kind)) {
 const client = new pg.Client({ connectionString: url });
 await client.connect();
 const { rows } = await client.query(
-  `SELECT id, kind, status, created_at, full_name, email, phone, organisation, locale, details
+  `SELECT id, kind, status, created_at, full_name, email, phone, organisation, pitch_deck_url, locale, details
      FROM applications ${kind ? 'WHERE kind = $1' : ''} ORDER BY created_at DESC`,
   kind ? [kind] : [],
 );
 await client.end();
 
 const detailKeys = [...new Set(rows.flatMap((r) => Object.keys(r.details ?? {})))].sort();
-const header = ['id', 'kind', 'status', 'created_at', 'full_name', 'email', 'phone', 'organisation', 'locale', ...detailKeys];
+const header = ['id', 'kind', 'status', 'created_at', 'full_name', 'email', 'phone', 'organisation', 'pitch_deck_url', 'locale', ...detailKeys];
 const cell = (v) => {
   if (v === null || v === undefined) return '';
   const s = Array.isArray(v) ? v.join('; ') : v instanceof Date ? v.toISOString() : String(v);

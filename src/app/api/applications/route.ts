@@ -56,17 +56,18 @@ function toRow(app: Application) {
   if (app.kind === 'startup') {
     return {
       organisation: app.startupName,
+      pitchDeckUrl: app.pitchDeck,
       details: {
         website: app.website,
         sector: app.sector,
         stage: app.stage,
         pitch: app.pitch,
-        pitchDeckUrl: app.pitchDeck,
       },
     };
   }
   return {
     organisation: app.organisation,
+    pitchDeckUrl: null,
     details: { role: app.role, investorType: app.investorType },
   };
 }
@@ -99,13 +100,13 @@ export async function POST(req: NextRequest) {
   // Honeypot filled: pretend success so bots learn nothing, store nothing.
   if (app.company_url) return json(201, { ok: true });
 
-  const { organisation, details } = toRow(app);
+  const { organisation, pitchDeckUrl, details } = toRow(app);
 
   try {
     await getPool().query(
       `INSERT INTO applications
-         (kind, full_name, email, phone, organisation, locale, details, consent_at, ip_hash, user_agent)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, now(), $8, $9)`,
+         (kind, full_name, email, phone, organisation, locale, details, consent_at, ip_hash, user_agent, pitch_deck_url)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, now(), $8, $9, $10)`,
       [
         app.kind,
         app.fullName,
@@ -116,6 +117,7 @@ export async function POST(req: NextRequest) {
         JSON.stringify(details),
         ipHash,
         req.headers.get('user-agent')?.slice(0, 400) ?? null,
+        pitchDeckUrl,
       ],
     );
   } catch (err) {
