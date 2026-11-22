@@ -61,13 +61,12 @@ function toRow(app: Application) {
         sector: app.sector,
         stage: app.stage,
         pitch: app.pitch,
-        interests: app.interests,
       },
     };
   }
   return {
     organisation: app.organisation,
-    details: { role: app.role, investorType: app.investorType, focusSectors: app.focusSectors },
+    details: { role: app.role, investorType: app.investorType },
   };
 }
 

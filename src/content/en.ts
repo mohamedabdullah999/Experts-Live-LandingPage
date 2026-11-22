@@ -21,18 +21,17 @@ const en: Content = {
     homeLink: 'Experts Live Saudi, back to top',
   },
   nav: [
-    { label: 'Your path', href: '#paths' },
     { label: 'Demo Day', href: '#demo-day' },
+    { label: 'Your path', href: '#paths' },
     { label: 'Programme', href: '#programme' },
-    { label: 'Speakers', href: '#speakers' },
-    { label: 'Venue', href: '#venue' },
+    { label: 'Partners', href: '#partners' },
   ],
   langSwitch: { label: 'العربية', href: '/ar', lang: 'ar' },
   ctaTicket: 'Get your ticket',
   hero: {
     kicker: 'Experts Live Saudi 2026',
-    titleLines: ['Demo Day', 'Startups to pitch'],
-    lead: 'At Experts Live Saudi 2026, startups pitch to investors, corporates and government buyers.',
+    titleLines: ['Startups', 'Demo Day'],
+    lead: 'At Experts Live Saudi 2026, startups pitch to investors.',
     tagline: 'Learn. Share. Lead.',
     dateLabel: 'When',
     date: '29–30 November 2026',
@@ -54,33 +53,6 @@ const en: Content = {
     { value: '6', label: 'tracks' },
     { value: '8', label: 'hands-on lab rooms' },
   ],
-  why: {
-    heading: 'Built for the Saudi digital economy',
-    intro:
-      'Experts Live began in the Netherlands in 2009 as a community-driven technology conference. The Saudi edition brings it to Riyadh, hosted by the AI in Healthcare Research Chair at Princess Nourah bint Abdulrahman University.',
-    pillars: [
-      {
-        fact: 'Since 2009',
-        title: 'A proven global brand',
-        text: 'Held in 16 countries. The Dutch edition draws 2,250+ participants and sells out two months ahead.',
-      },
-      {
-        fact: '60–70% Arabic',
-        title: 'Arabic first',
-        text: 'The first Arabic edition of Experts Live, built for the Saudi context.',
-      },
-      {
-        fact: 'Level 300–400',
-        title: 'Real technical depth',
-        text: 'Practical engineering sessions and labs. No sales pitches.',
-      },
-      {
-        fact: 'Vision 2030',
-        title: 'Aligned with national priorities',
-        text: 'Human capability development, digital government, cloud sovereignty under NCA requirements, Saudi talent and AI in healthcare.',
-      },
-    ],
-  },
   paths: {
     heading: 'Find your two days',
     intro: 'Pick the one that sounds like you. We’ll show what your two days look like and where to start.',
@@ -205,11 +177,9 @@ const en: Content = {
       sector: { label: 'Sector' },
       stage: { label: 'Stage' },
       pitch: { label: 'Your startup in one line', hint: 'What you do and for whom, in up to 280 characters.' },
-      interests: { label: 'I’m interested in' },
       organisation: { label: 'Organisation' },
       role: { label: 'Role' },
       investorType: { label: 'Investor type' },
-      focusSectors: { label: 'Sectors you invest in' },
       consent: { label: 'Experts Live Saudi may store these details and contact me about Demo Day.' },
     },
     selectPlaceholder: 'Choose one',
@@ -227,10 +197,6 @@ const en: Content = {
       { value: 'prototype', label: 'Prototype or MVP' },
       { value: 'early-revenue', label: 'Early revenue' },
       { value: 'growth', label: 'Growth' },
-    ],
-    interests: [
-      { value: 'demo-day', label: 'Pitching at Demo Day' },
-      { value: 'startup-pod', label: 'A Startup Corner pod' },
     ],
     investorTypes: [
       { value: 'vc', label: 'Venture capital' },
@@ -311,38 +277,10 @@ const en: Content = {
     ],
     all: 'See all speakers',
   },
-  venue: {
-    heading: 'PNU Conference & Convention Center',
-    sub: 'Princess Nourah bint Abdulrahman University, Riyadh',
-    spaces: [
-      { title: 'Red Hall', text: 'The main stage, about 44 × 41 m, with a balcony. Keynotes, panels and the Super Nourah launch.' },
-      { title: 'Expo Hall 1', text: 'Registration, partner stands and the demo arena.' },
-      { title: 'Expo Hall 2', text: 'The Startup Corner, the Cyber Escape Challenge, tech kiosks and the networking bar.' },
-      { title: 'Workshops 1–8', text: 'Seminar rooms for the hands-on labs.' },
-    ],
-    twin: 'Explore the 3D venue',
-    maps: 'Open in Maps',
-    photoAlt: 'The Red Hall at PNU: red raked seating facing a stage with LED screens.',
-    photoCaption: 'Red Hall, PNU',
-  },
-  tickets: {
-    heading: 'Choose your ticket',
-    intro: 'Prices in Saudi riyals. Booking and payment happen on the official registration site.',
-    // TBC: confirm Early Bird is still on sale
-    tiers: [
-      { name: 'Early Bird', price: '99' },
-      { name: 'Standard', price: '399.90' },
-      { name: 'VIP', price: '1,299.90' },
-      { name: 'Team', price: '1,499.90', note: 'For 5 people' },
-    ],
-    book: 'Book {tier}',
-    currency: 'SAR',
-    student: 'Students and graduates: passes are offered through PNU and the Saudi Digital Academy.',
-  },
   partners: {
     heading: 'Organised with',
     groups: [
-      { title: 'Organised by', names: ['PNU', 'AI in Healthcare Chair', 'ZAT.VC', 'Cloud Mechanics', 'Smart Code'] },
+      { title: 'Organised by', names: ['AI in Healthcare Chair', 'ZAT.VC', 'Cloud Mechanics', 'Smart Code'] },
       { title: 'In collaboration with', names: ['Microsoft', 'MCIT', 'Saudi Digital Academy', 'SDA thehub'] },
       { title: 'Official partners', names: ['BLEND', 'CapNest', 'STF', 'iyelo', 'JOFOUZ', 'Companyx'] },
       {
@@ -355,14 +293,7 @@ const en: Content = {
   partnerCta: {
     heading: 'Invite your clients. Meet them at your booth.',
     body: 'Partner with Experts Live Saudi and put your team in front of 1,000+ visitors, 500+ of them C-level and digital economy leaders.',
-    points: [
-      'Packages from digital presence to strategic partner',
-      'Live demos and QR lead capture at your stand',
-      'Podcast, press, live streaming and social coverage',
-    ],
-    primary: 'Partner with us',
-    secondary: 'View the sponsor profile',
-    mailSubject: 'Partnering with Experts Live Saudi 2026',
+    freeTicket: 'Get your free ticket',
   },
   footer: {
     line: 'Experts Live Saudi · PNU, Riyadh · 29–30 Nov 2026 · Presented by ZAT.VC & Cloud Mechanics · In partnership with Microsoft, MCIT, PNU & AI Chair',

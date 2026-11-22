@@ -27,28 +27,6 @@
   font-size: var(--fs-md);
 }
 
-.points {
-  display: grid;
-  gap: var(--space-3);
-  margin-bottom: var(--space-6);
-}
-
-.points li {
-  position: relative;
-  padding-inline-start: var(--space-5);
-  color: var(--text);
-}
-
-.points li::before {
-  content: '';
-  position: absolute;
-  inset-inline-start: 0;
-  top: 0.7em;
-  width: 0.6rem;
-  height: 2px;
-  background: var(--cyan);
-}
-
 .ctas {
   display: flex;
   flex-wrap: wrap;

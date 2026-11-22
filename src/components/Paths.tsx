@@ -7,7 +7,7 @@ import { ButtonLink } from './Button';
 import { Section, SectionHead } from './Section';
 import styles from './Paths.module.css';
 
-export function Paths({ c }: { c: Pick<Content, 'dir' | 'paths'> }) {
+export function Paths({ c }: { c: Pick<Content, 'dir' | 'paths' | 'a11y'> }) {
   const personas = c.paths.personas;
   const [active, setActive] = useState(0);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -39,8 +39,6 @@ export function Paths({ c }: { c: Pick<Content, 'dir' | 'paths'> }) {
       select(personas.length - 1);
     }
   };
-
-  const isTicketLink = persona.cta.href === '#tickets';
 
   return (
     <Section id="paths" labelledBy="paths-title" alt>
@@ -110,7 +108,9 @@ export function Paths({ c }: { c: Pick<Content, 'dir' | 'paths'> }) {
               {persona.cta.label}
             </ButtonLink>
           ) : (
-            <ButtonLink href={isTicketLink ? '#tickets' : SITE.links.tickets}>{persona.cta.label}</ButtonLink>
+            <ButtonLink href={SITE.links.tickets} external newTabLabel={c.a11y.opensNewTab}>
+              {persona.cta.label}
+            </ButtonLink>
           )}
         </div>
       </div>

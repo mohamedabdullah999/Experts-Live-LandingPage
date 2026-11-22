@@ -7,6 +7,7 @@ export const SITE = {
   eventEnd: '2026-11-30T23:59:00+03:00',
   links: {
     // Deep link to the ticket shop, format from BRIEF.md (without a promo code)
+    freeTicket: 'https://go.expertslive.sa/e26/free-ticket',
     tickets: 'https://elksa26.expertslive.sa/ExpertsLiveSaudi2026CloudAIConference#/buyTickets',
     registration: 'https://elksa26.expertslive.sa',
     website: 'https://expertslive.sa',

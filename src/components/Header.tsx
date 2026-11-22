@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Content } from '@/content/types';
 import { SITE } from '@/lib/site';
 import { ButtonLink } from './Button';
-import { ElksaChip, PnuLogo } from './Logos';
+import { ElksaChip } from './Logos';
 import styles from './Header.module.css';
 
 export type HeaderCopy = Pick<Content, 'dir' | 'a11y' | 'nav' | 'langSwitch' | 'ctaTicket'>;
@@ -35,20 +35,9 @@ export function Header({ c }: { c: HeaderCopy }) {
 
   const close = () => setOpen(false);
 
-  // PNU must stay first at the top right in both directions; the ELKSA chip follows to its left.
   const logos = (
     <a href="#top" className={styles.logos} aria-label={c.a11y.homeLink} onClick={close}>
-      {c.dir === 'rtl' ? (
-        <>
-          <PnuLogo alt={c.a11y.pnuLogo} />
-          <ElksaChip alt={c.a11y.elksaLogo} />
-        </>
-      ) : (
-        <>
-          <ElksaChip alt={c.a11y.elksaLogo} />
-          <PnuLogo alt={c.a11y.pnuLogo} />
-        </>
-      )}
+      <ElksaChip alt={c.a11y.elksaLogo} />
     </a>
   );
 

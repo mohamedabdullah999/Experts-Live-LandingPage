@@ -1,6 +1,6 @@
 import type { Content } from '@/content/types';
 import { SITE } from '@/lib/site';
-import { ElksaChip, PnuLogo } from './Logos';
+import { ElksaChip } from './Logos';
 import styles from './Footer.module.css';
 
 export function Footer({ c }: { c: Content }) {
@@ -37,7 +37,6 @@ export function Footer({ c }: { c: Content }) {
           </ul>
           <div className={styles.logos} dir="ltr">
             <ElksaChip alt={c.a11y.elksaLogo} />
-            <PnuLogo alt={c.a11y.pnuLogo} />
           </div>
         </div>
         {/* Approved footer line, verbatim (EXPERTS-LIVE-SAUDI.md §2) */}

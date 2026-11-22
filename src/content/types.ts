@@ -96,7 +96,6 @@ export interface Content {
     daysToGo: { one: string; two?: string; few?: string; many: string };
   };
   facts: { value: string; label: string }[];
-  why: { heading: string; intro: string; pillars: (Item & { fact: string })[] };
   paths: {
     heading: string;
     intro: string;
@@ -124,18 +123,15 @@ export interface Content {
       sector: FieldCopy;
       stage: FieldCopy;
       pitch: FieldCopy;
-      interests: FieldCopy;
       organisation: FieldCopy;
       role: FieldCopy;
       investorType: FieldCopy;
-      focusSectors: FieldCopy;
       consent: FieldCopy;
     };
     selectPlaceholder: string;
     optional: string;
     sectors: Option[];
     stages: Option[];
-    interests: Option[];
     investorTypes: Option[];
     sending: string;
     /** {email} is replaced with the address the person entered */
@@ -180,24 +176,6 @@ export interface Content {
     list: Speaker[];
     all: string;
   };
-  venue: {
-    heading: string;
-    sub: string;
-    spaces: Item[];
-    twin: string;
-    maps: string;
-    photoAlt: string;
-    photoCaption: string;
-  };
-  tickets: {
-    heading: string;
-    intro: string;
-    tiers: Tier[];
-    /** {tier} is replaced with the tier name */
-    book: string;
-    currency: string;
-    student: string;
-  };
   partners: {
     heading: string;
     groups: { title: string; names: string[] }[];
@@ -206,10 +184,7 @@ export interface Content {
   partnerCta: {
     heading: string;
     body: string;
-    points: string[];
-    primary: string;
-    secondary: string;
-    mailSubject: string;
+    freeTicket: string;
   };
   footer: {
     line: string;

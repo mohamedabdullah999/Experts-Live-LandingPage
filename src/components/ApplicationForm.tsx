@@ -82,13 +82,11 @@ export function ApplicationForm({ c }: { c: Pick<Content, 'locale' | 'form'> }) 
             sector: String(data.get('sector') ?? ''),
             stage: String(data.get('stage') ?? ''),
             pitch: String(data.get('pitch') ?? ''),
-            interests: data.getAll('interests').map(String),
           }
         : {
             organisation: String(data.get('organisation') ?? ''),
             role: String(data.get('role') ?? ''),
             investorType: String(data.get('investorType') ?? ''),
-            focusSectors: data.getAll('focusSectors').map(String),
           }),
     };
 
@@ -327,7 +325,6 @@ export function ApplicationForm({ c }: { c: Pick<Content, 'locale' | 'form'> }) 
                     aria-invalid={errors.pitch ? true : undefined}
                     aria-describedby={describedBy('pitch', true)}
                   />)}
-                {checks('interests', f.fields.interests.label, f.interests)}
               </>
             ) : (
               <>
@@ -336,7 +333,6 @@ export function ApplicationForm({ c }: { c: Pick<Content, 'locale' | 'form'> }) 
                   {field({ name: "role", label: f.fields.role.label }, input('role', 'text', { autoComplete: 'organization-title' }))}
                 </div>
                 {field({ name: "investorType", label: f.fields.investorType.label }, select('investorType', f.investorTypes))}
-                {checks('focusSectors', f.fields.focusSectors.label, f.sectors, true)}
               </>
             )}
 

@@ -6,7 +6,6 @@ import { z } from 'zod';
  */
 export const SECTORS = ['ai', 'cloud', 'fintech', 'healthtech', 'digital-services', 'other'] as const;
 export const STAGES = ['idea', 'prototype', 'early-revenue', 'growth'] as const;
-export const INTERESTS = ['demo-day', 'startup-pod'] as const;
 export const INVESTOR_TYPES = ['vc', 'angel', 'cvc', 'accelerator', 'other'] as const;
 
 export const LIMITS = { name: 120, email: 200, phone: 30, org: 160, url: 300, pitch: 280 } as const;
@@ -64,7 +63,6 @@ export const startupSchema = z.object({
   sector: z.enum(SECTORS, { error: 'required' }),
   stage: z.enum(STAGES, { error: 'required' }),
   pitch: text(LIMITS.pitch),
-  interests: z.array(z.enum(INTERESTS)).min(1, { error: 'chooseOne' }),
 });
 
 export const investorSchema = z.object({
@@ -73,7 +71,6 @@ export const investorSchema = z.object({
   organisation: text(LIMITS.org),
   role: text(LIMITS.org),
   investorType: z.enum(INVESTOR_TYPES, { error: 'required' }),
-  focusSectors: z.array(z.enum(SECTORS)).default([]),
 });
 
 export const applicationSchema = z.discriminatedUnion('kind', [startupSchema, investorSchema]);
