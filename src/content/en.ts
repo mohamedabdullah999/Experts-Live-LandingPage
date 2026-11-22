@@ -279,16 +279,15 @@ const en: Content = {
   },
   partners: {
     heading: 'Organised with',
-    groups: [
-      { title: 'Organised by', names: ['AI in Healthcare Chair', 'Year of AI 2026', 'Cloud Mechanics'] },
-      { title: 'In collaboration with', names: ['Microsoft', 'MCIT', 'Saudi Digital Academy', 'SDA thehub'] },
-      { title: 'Official partners', names: ['BLEND', 'CapNest', 'STF', 'iyelo', 'JOFOUZ', 'Companyx'] },
-      {
-        title: 'Sponsors and exhibitors',
-        names: ['Tabby', 'HyperPay', 'Tawwaq', 'Beetleware', 'Alfia', 'AYEN', 'Plus', 'Raseel', 'ThaatAi', 'Thabat', 'Cloudative', 'Linx'],
-      },
-    ],
-    more: '+ more joining',
+    groupTitles: {
+      powered: 'Organised by',
+      main: 'Main partners',
+      diamond: 'Diamond sponsor',
+      platinum: 'Platinum sponsors',
+      gold: 'Gold sponsor',
+      bronze: 'Bronze sponsors',
+      partners: 'Partners',
+    },
   },
   partnerCta: {
     heading: 'Invite your clients. Meet them at your booth.',

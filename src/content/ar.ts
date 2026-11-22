@@ -277,16 +277,15 @@ const ar: Content = {
   },
   partners: {
     heading: 'بالشراكة مع',
-    groups: [
-      { title: 'التنظيم', names: ['AI in Healthcare Chair', 'Year of AI 2026', 'Cloud Mechanics'] },
-      { title: 'بالتعاون مع', names: ['Microsoft', 'MCIT', 'Saudi Digital Academy', 'SDA thehub'] },
-      { title: 'الشركاء الرسميون', names: ['BLEND', 'CapNest', 'STF', 'iyelo', 'JOFOUZ', 'Companyx'] },
-      {
-        title: 'الرعاة والعارضون',
-        names: ['Tabby', 'HyperPay', 'Tawwaq', 'Beetleware', 'Alfia', 'AYEN', 'Plus', 'Raseel', 'ThaatAi', 'Thabat', 'Cloudative', 'Linx'],
-      },
-    ],
-    more: 'والمزيد قريبًا',
+    groupTitles: {
+      powered: 'التنظيم',
+      main: 'الشركاء الرئيسيون',
+      diamond: 'الراعي الماسي',
+      platinum: 'الرعاة البلاتينيون',
+      gold: 'الراعي الذهبي',
+      bronze: 'الرعاة البرونزيون',
+      partners: 'الشركاء',
+    },
   },
   partnerCta: {
     heading: 'ادعُ عملاءك، والتقِ بهم في جناحك.',

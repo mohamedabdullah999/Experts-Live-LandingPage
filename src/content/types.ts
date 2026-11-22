@@ -1,3 +1,4 @@
+import type { SponsorGroupId } from '@/lib/sponsors';
 /**
  * Shape of all page copy. Every fact in en.ts / ar.ts must come from the official
  * agent kit (EXPERTS-LIVE-SAUDI.md, BRAND.md). Anything not confirmed is listed in
@@ -178,8 +179,8 @@ export interface Content {
   };
   partners: {
     heading: string;
-    groups: { title: string; names: string[] }[];
-    more: string;
+    /** Group order and logos live in src/lib/sponsors.ts */
+    groupTitles: Record<SponsorGroupId, string>;
   };
   partnerCta: {
     heading: string;

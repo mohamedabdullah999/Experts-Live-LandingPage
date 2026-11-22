@@ -25,56 +25,44 @@
   gap: var(--space-3);
 }
 
-/* Brand rule: partner logos sit on white rounded chips */
+/* The official artwork is white on transparent, so tiles are dark (as on expertslive.sa) */
 .tile {
+  --tile-w: 9.5rem;
+  --tile-h: 4.5rem;
+  --logo-h: 2.4rem;
   display: grid;
   place-items: center;
-  width: 9.5rem;
-  height: 4.5rem;
+  width: var(--tile-w);
+  height: var(--tile-h);
   padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--rule);
   border-radius: var(--radius-chip);
-  background: var(--white);
+  background: var(--bg-2);
+  transition: border-color 0.2s ease;
 }
 
-.tile img {
-  width: auto;
+.tile:hover {
+  border-color: var(--indigo);
+}
+
+.lead .tile {
+  --tile-w: 12rem;
+  --tile-h: 6rem;
+  --logo-h: 3.4rem;
+}
+
+.logo {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: var(--ar);
+  width: min(100%, calc(var(--logo-h) * var(--ar)));
+}
+
+.logo img {
+  position: absolute;
+  max-width: none;
   height: auto;
-  max-width: 100%;
-  max-height: 2.4rem;
-  object-fit: contain;
-  mix-blend-mode: multiply; /* drops white/grey backgrounds baked into some files */
-}
-
-.mono img {
-  filter: brightness(0);
-  opacity: 0.85;
-}
-
-/* PNU logo is never recoloured: keep the white artwork on a dark chip */
-.dark {
-  background: var(--navy);
-  border: 1px solid var(--indigo);
-}
-
-.dark img {
-  mix-blend-mode: normal;
-}
-
-.textTile {
-  color: var(--ink-muted);
-  font-family: var(--font-latin);
-  font-size: var(--fs-sm);
-  font-weight: 700;
-  text-align: center;
-  line-height: 1.2;
-}
-
-.more {
-  align-self: center;
-  padding-inline: var(--space-3);
-  color: var(--pale);
-  font-size: var(--fs-sm);
-  font-weight: 600;
 }
 
 @media (max-width: 759px) {
@@ -87,7 +75,8 @@
     padding-top: 0;
   }
 
-  .tile {
+  .tile,
+  .lead .tile {
     width: calc(50% - var(--space-3) / 2);
   }
 }
